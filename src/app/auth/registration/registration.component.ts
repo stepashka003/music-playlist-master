@@ -36,7 +36,8 @@ export class RegisterComponent {
       Validators.required,
       Validators.email
     ]),
-    password: new FormControl<string>('', Validators.required)
+    password: new FormControl<string>('', Validators.required),
+    confirmPassword: new FormControl<string>('', Validators.required)
   });
 
   public get name(): FormControl<string> {
@@ -50,6 +51,10 @@ export class RegisterComponent {
   public get password(): FormControl<string> {
     return this.RegisterForm.get('password') as FormControl<string>;
   }
+
+  public get confirmPassword(): FormControl<string> {
+    return this.RegisterForm.get('confirmPassword') as FormControl<string>;
+  }
   
 
   public register(): void {
@@ -57,7 +62,7 @@ export class RegisterComponent {
       userAvatar: this.name.value,
       email: this.email.value,
       password: this.password.value,
-      passwordConfirm: this.password.value
+      passwordConfirm: this.confirmPassword.value
     };
     this.authService.register(RegisterModel).subscribe(() => {
       this.router.navigate(['/login']);
@@ -66,7 +71,7 @@ export class RegisterComponent {
 
   public goBack(): void {
     //this.location.back();
-    this.router.navigate(['/home']);
+    this.router.navigate(['/login']);
   }
 
 }

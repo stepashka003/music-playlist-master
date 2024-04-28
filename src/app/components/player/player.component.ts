@@ -75,7 +75,7 @@ export class PlayerComponent implements OnInit {
     {
       album: "album1",
       title: "Jungle",
-      artist: "Alok feat The Chainsmokers, Mae Stephens",
+      artist: "Alok",
       url: "https://slipknotation.narod.ru/mp3/slipknot/Slipknot_-_Wait_and_bleed.mp3"
     },
     {

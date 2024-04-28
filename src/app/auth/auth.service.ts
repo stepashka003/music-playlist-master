@@ -51,28 +51,28 @@ export class AuthService {
 
   public login(model: Login): Observable<any> {
     let headers = new HttpHeaders({ ['Content-Type']: 'application/json' });
-    return this.httpClient.post<any>(environment.apiUrl + 'auth/login', JSON.stringify(model), {
+    return this.httpClient.post<any>(environment.apiUrl + 'Authorization/login', JSON.stringify(model), {
       headers: headers
     })
-      .pipe(
-        tap({
-          next: result => {
-            this._accessToken = result.accessToken;
-            this.parseUserName();
-            this._isAuthorized = true;
-          }, error: _ => {
-            this._accessToken = '';
-            this._user = '';
-            this._userName = '';
-            this._userEmail = '';
-          }
-        })
-      );
+      // .pipe(
+      //   tap({
+      //     next: result => {
+      //       this._accessToken = result.accessToken;
+      //       this.parseUserName();
+      //       this._isAuthorized = true;
+      //     }, error: _ => {
+      //       this._accessToken = '';
+      //       this._user = '';
+      //       this._userName = '';
+      //       this._userEmail = '';
+      //     }
+      //   })
+      // );
   }
 
   public register(model: Registration): Observable<any> {
     let headers = new HttpHeaders({ ['Content-Type']: 'application/json' });
-    return this.httpClient.post(environment.apiUrl + 'auth/register', JSON.stringify(model), {
+    return this.httpClient.post(environment.apiUrl + 'Authorization/registration', JSON.stringify(model), {
       headers: headers
     })
   }

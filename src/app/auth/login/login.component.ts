@@ -66,4 +66,8 @@ export class LoginComponent {
     this.router.navigate(['/popular']);
   }
 
+  public openReg(): void {
+    this.router.navigate(['/register']);
+  }
+
 }

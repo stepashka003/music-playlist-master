@@ -23,6 +23,7 @@ span.spacer {
 }
 
 .global-container {
+    background-color: #fff;
     width: 100%;
     //height: 70px;
     display: flex;
@@ -30,17 +31,20 @@ span.spacer {
 }
 
 .container {
+    
     //height: 100%;
     width: 1440px;
+    position: fixed;
+    top: calc(100% - 80px);
     
 }
 
 .player {
     //position: fixed;
-    //width: 100%;
+    //width: 1440px;
     height: 50px;
-    //top: calc(100% - 130px);
-    background-color: #e9a0a0;
+    //top: calc(100% - 50px);
+    background-color: #fff;
 
     display: flex;
     flex-direction: row;
@@ -59,7 +63,7 @@ span.spacer {
         justify-content: space-between;
         align-items: center;
         padding-inline: 20px;
-        background-color: #e9a0a0;
+        background-color: #fff;
     }
 
     &__volume {
@@ -71,6 +75,8 @@ span.spacer {
 
 .player-up {
     //height: 10px;
+    //position: fixed;
+    //top: calc(100% - 70px);
     padding-inline: 20px;
     display: flex;
     flex-direction: row;

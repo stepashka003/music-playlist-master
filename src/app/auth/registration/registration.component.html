@@ -19,6 +19,12 @@
                 <input type="password" matInput formControlName="password">
                 <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
             </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>ConfirmPassword</mat-label>
+                <input type="password" matInput formControlName="confirmPassword">
+                <mat-error *ngIf="confirmPassword.hasError('required')">Password is required</mat-error>
+            </mat-form-field>
         </form>
         <div class="buttons">
             <button mat-flat-button class="buttons__button" (click)="goBack()">Back</button>

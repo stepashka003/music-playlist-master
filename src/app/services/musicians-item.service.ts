@@ -17,11 +17,7 @@ export class MusiciansItemService {
 public activeMusician: string = "";
 
   public pageItems: CardMusicians[] = [
-    {
-      id: 1,
-      name: "Нойз",
-      imageUrl: "https://www.yugopolis.ru/cdn/data/img/cdbb04ac08902ad689d7e0cd19585b33/138911.jpg"
-    },
+    
     {
       id: 1,
       name: "рок",
@@ -48,11 +44,7 @@ public activeMusician: string = "";
 
   public albumItems: CardMusicianAlbums[] = [
 
-    {
-      id: 1,
-      name: "Open Air",
-      imageUrl: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/80/e9/94/80e9947d-03ed-f333-7813-31cba0c5f725/0.jpg/1200x1200bf-60.jpg"
-    },
+    
     {
       id: 1,
       name: "рок",

@@ -20,9 +20,9 @@ export class GenreComponent implements OnInit{
   public navItems: CardGenre[] = [];
 
   public ngOnInit(): void {
-    //this.loadGenres();
-    this.navItems = this.genreService.getGenreItems();
-    //console.log(this.navItems.length);
+    this.loadGenres();
+    //this.navItems = this.genreService.getGenreItems();
+    console.log(this.navItems.length);
   }
 
   private loadGenres(): void {

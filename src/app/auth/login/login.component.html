@@ -16,9 +16,13 @@
             </mat-form-field>
     
         </form>
+        <a (click)="openReg()">Sign In</a>
         <div class="buttons">
             <button mat-flat-button class="buttons__button" (click)="goBack()">Back</button>
             <button mat-flat-button class="buttons__button" (click)="login()" [disabled]="loginForm.invalid">Login</button>
         </div>
     </div>
 </div>
+
+
+
